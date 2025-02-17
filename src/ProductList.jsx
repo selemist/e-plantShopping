@@ -246,6 +246,10 @@ const handlePlantsClick = (e) => {
     e.preventDefault();
     setShowCart(false);
   };
+
+  const handleAddToCart = (product) => {
+    dispatch(addItem(product));
+  };
     return (
         <div>
              <div className="navbar" style={styleObj}>
