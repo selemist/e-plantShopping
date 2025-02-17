@@ -11,7 +11,7 @@ export const CartSlice = createSlice({
             if (itemIndex >= 0) {
                 state.items[itemIndex].quantity += 1;
             } else {
-                state.items.push([...action.payload, quantity = 1]);
+              state.items.push({ ...action.payload, quantity: 1 });
             }
         },
         removeItem: (state, action) => {
